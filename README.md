@@ -1,4 +1,5 @@
-# Project-Multiversum
+# MADE BY Anthony Man & Laurens Tobias
+## Project-Multiversum
 - Naming conventions = Gebruik van logische naming conventions en camelcases
 - Program conventions = 4 space inspringen
 
@@ -8,7 +9,9 @@
 - Achtergrondkleur = #1ABC9C, #F1C40F, #FFFFFF
 - Font = Quicksand by Andrew Paglinawan
 
-#LOGIN
-Project-Multiversum/?op=login
-username= jack
-password= 123
+## LOGIN
+- Project-Multiversum/?op=login
+- username= jack
+- password= 123
+
+###### ©2020 Multiversum
