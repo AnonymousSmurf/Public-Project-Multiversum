@@ -1,0 +1,16 @@
+.overview-orders {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    table {
+        text-align: center;
+        tr {
+            th, td {
+                padding: 10px 20px;
+            }
+            th {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+}

@@ -1,0 +1,320 @@
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-form {
+        border: 3px solid $primary;
+        width: 33%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .brand {
+            text-align: center;
+            img {
+                width: 150px;
+            }
+        }
+        form {
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            label {
+                font-weight: bold;
+                color: $primary;
+            }
+            input {
+                padding: 5px 0;
+            }
+            input[type=submit] {
+                border: none;
+                padding: 8px 0;
+                color: #fff;
+                background: $secondary;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.admin-page-wrapper {
+    width: 100%;
+    .side-nav {
+        float: left;
+        min-width: 250px;
+        width: 15%;
+        height: 100vh;
+        border-right: solid 1px $primary;
+        .brand {
+            height: 150px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-bottom: solid 1px $primary;
+            img {
+                width: 150px;
+            }
+        }
+        .admin-menu {
+            width: 100%;
+            .navigation {
+                width: 100%;
+            }
+            .mainmenu,
+            .submenu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .mainmenu {
+                li {
+                    border-bottom: 1px solid black;
+                }
+                a,
+                label {
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px;
+                    color: $primary;
+                    font-weight: bold;
+                    font-size: 20px;
+                    user-select: none;
+                }
+
+                .active {
+                    a,
+                    label {
+                        background: $secondary;
+                        color: #fff;
+                        &:hover {
+                            background: $secondary;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                label:hover {
+                    background-color: $primary;
+                    color: white;
+                }
+
+                input {
+                    display: none;
+                }
+
+                a:hover {
+                    background-color: $primary;
+                    color: white;
+                }
+
+                :checked + .submenu {
+                    display: block;
+                    max-height: 200px;
+                }
+            }
+            .submenu {
+                li {
+                    border-top: 1px solid black;
+                    border-bottom: none;
+                }
+                a {
+                    font-size: 15px;
+                    &:hover {
+                        background-color: $primary;
+                    }
+                }
+                overflow: hidden;
+                max-height: 0;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+    .admin-page {
+        float: right;
+        width: 85%;
+        height: 100vh;
+
+        .confirm-delete-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                padding-bottom: 20px;
+            }
+            .confirm-delete {
+                width: 50%;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    button {
+                        border: none;
+                        padding: 20px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #fff;
+                        background: $secondary;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+
+        .confirm-message {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p {
+                font-size: 30px;
+                font-weight: bold;
+                color: $primary;
+                padding-bottom: 50px;
+            }
+            button {
+                border: none;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    background: $secondary;
+                    padding: 20px 30px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .overview-products {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            table {
+                text-align: center;
+                tr {
+                    td {
+                        font-weight: bold;
+                        color: $primary;
+                        .add-product {
+                            button {
+                                border: none;
+                                a {
+                                    border-radius: 10px;
+                                    padding: 10px 15px;
+                                    background: $secondary;
+                                    color: #fff;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    th,
+                    td {
+                        padding: 10px 20px;
+                    }
+                    th {
+                        border-bottom: 2px solid black;
+                    }
+                }
+            }
+        }
+        .admin-create-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                padding-bottom: 50px;
+            }
+            .admin-create-product {
+                display: flex;
+                justify-content: center;
+                form {
+                    table {
+                        height: 600px;
+                    }
+                    .description {
+                        width: 100%;
+                        text-align: center;
+                        textarea {
+                            resize: none;
+                            height: 80px;
+                            width: 100%;
+                        }
+                    }
+                    input[type="submit"] {
+                        width: 100%;
+                        border: none;
+                        padding: 10px;
+                        margin-top: 10px;
+                        font-size: 25px;
+                        font-weight: bold;
+                        background-color: $secondary;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .adminUpdateForm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            h1 {
+                padding-bottom: 10px;
+            }
+            textarea {
+                justify-content: center;
+                display: block;
+                background: #e3e3e3;
+                resize: none;
+                border: none;
+                overflow: auto;
+                width: 100%;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            textarea:focus {
+                background-color: #cccccc;
+                outline: none;
+            }
+
+            .adminUpdateForm-btn {
+                width: 100%;
+                padding: 10px 20px;
+                border: none;
+                background-color: $secondary;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        .admin-update-product {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            form {
+                textarea {
+                    width: 100%;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

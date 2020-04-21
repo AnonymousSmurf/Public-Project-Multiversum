@@ -1,0 +1,108 @@
+.main-container{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    height: 100vh;
+    top: 0;
+    .contactForm {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 50px;
+        background-color: white;
+
+        form {
+            width: 80%;
+            
+            input[type=text] {
+                width: 100%;
+                padding: 16px;
+                margin: 5px 2px 22px 0;
+                display: block;
+                border: none;
+                background: #f1f1f1;
+            }
+            
+            input[type=text]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            
+            .sendContactForm {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+            
+            .registerbtn:hover {
+                opacity: 1;
+            }
+
+            textarea {
+                justify-content: center;
+                display: block;
+                background: #f1f1f1;
+                resize: none;
+                border: none;
+                overflow: auto;
+                width: 100%;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+
+            textarea:focus{
+                background-color: #ddd;
+                outline: none;
+            }
+
+            p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .contact-container {
+        width: 50%;
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        .contact-box {
+            box-sizing: border-box;
+        
+        }
+    }
+}
+
+
+/*--------------------------------------------
+Media Queries
+--------------------------------------------*/
+
+@media screen and (max-width: 570px) {
+    .main-container{
+        margin-top: 100px;
+        .contactForm {
+            float: none !important;
+            width: 100% !important;
+            height: unset !important;
+        }
+
+        .contact-container {
+            float: none !important;
+            width: 100% !important;
+            height: unset !important;
+        }
+    }
+}
+

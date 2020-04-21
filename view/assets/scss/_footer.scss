@@ -1,0 +1,47 @@
+/*--------------------------------------------
+Footer
+--------------------------------------------*/
+
+
+.container-footer {
+    .footer {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background: $primary;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 0 5px;
+            &:hover {
+                color: $secondary;
+            }
+        }
+        p {
+            position: absolute;
+            color: #fff;
+            left: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+.policy-container {
+    display: flex;
+    justify-content: center;
+    .policy {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 80%;
+        h1 {
+            text-align: center;
+        }
+    }
+}

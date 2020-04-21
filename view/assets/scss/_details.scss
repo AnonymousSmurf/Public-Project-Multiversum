@@ -1,0 +1,214 @@
+.product-container {
+    display: flex;
+    justify-content: center;
+    .product-box {
+        margin-top: 80px;
+        width: 40%;
+        .top-details {
+            height: 300px;
+            .img-container {
+                width: 60%;
+                float: left;
+                text-align: center;
+                overflow: hidden;
+                img {
+                    width: 90%;
+                    max-height: 300px !important;
+                }
+            }
+            .product-details{
+                width: 40%;
+                float: right;
+                height: 300px;
+                text-align: center;
+                .product-title {
+                    margin-top: 50px;
+                    color: black;
+                    font-weight: bolder;
+                }
+                .product-price {
+                    margin-top: 50px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .add-button {
+                    margin-top: 50px;
+                    a {
+                        button {
+                            background: $secondary;
+                            border: none;
+                            color: white;
+                            padding: 10px 15px;
+                            font-weight: bold;
+                            font-size: 20px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .discription {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                font-weight: bold;
+                font-size: 15px;
+                width: 100%;
+            }
+        }
+        .specs {
+            margin-top: 50px;
+            margin-bottom: 100px;
+            .spec-center {
+                text-align: center;
+                font-weight: bold;
+            }
+            .spec-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                table {
+                    width: 100%;
+                    tr {
+                        th {
+                            width: 40%;
+                            padding: 5px 0;
+                            font-weight: bold;
+                            font-size: 18px;
+                            text-align: start;
+                        }
+                        td {
+                            width: 60%;
+                            padding: 5px 0;
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                        &:nth-child(even) {
+                            background: rgba(95, 95, 95, 0.3);
+                        }
+
+                        &:nth-child(odd) {
+                            background: rgba(209, 209, 209, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.no-product-found-container {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .no-product-found {
+        text-align: center;
+        h1 {
+            color: $primary;
+            font-weight: bold;
+            font-size: 80px;
+        }
+        p {
+            font-size: 30px;
+            color: $primary;
+            padding-bottom: 30px;
+        }
+        button {
+            border: none;
+            a {
+                text-decoration: none;
+                color: #fff;
+                background: $secondary;
+                padding: 20px 30px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
+/*--------------------------------------------
+Media Queries
+--------------------------------------------*/
+
+@media screen and (max-width: 1500px) {
+    .product-container {
+        .product-box {
+            width: 60% !important;
+            padding: 10px !important;
+            margin-bottom: 50px !important;
+            .top-details {
+                .product-details {
+                    .product-price {
+                        margin-top: 20px !important;
+                    }
+                    .add-button {
+                        margin-top: 20px !important;
+                    }
+                }
+            }
+            .discription {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product-container {
+        .product-box {
+            width: 90% !important;
+            padding: 10px !important;
+            margin-bottom: 50px !important;
+            .top-details {
+                .product-details {
+                    .product-price {
+                        margin-top: 20px !important;
+                    }
+                    .add-button {
+                        margin-top: 20px !important;
+                    }
+                }
+            }
+            .discription {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .product-container {
+        .product-box {
+            width: 100% !important;
+            padding: 10px !important;
+            margin-bottom: 50px !important;
+            .top-details {
+                height: unset !important;
+                .img-container {
+                    float: unset !important;
+                    width: 100% !important;
+                }
+                .product-details {
+                    float: unset !important;
+                    width: 100% !important;
+                    height: unset !important;
+                    .product-price {
+                        margin-top: 20px !important;
+                    }
+                    .add-button {
+                        margin-top: 20px !important;
+                    }
+                }
+            }
+            .discription {
+                margin-top: 20px !important;
+            }
+        }
+    }
+}

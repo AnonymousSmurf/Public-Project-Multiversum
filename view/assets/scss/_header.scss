@@ -1,0 +1,242 @@
+/*--------------------------------------------
+Header
+--------------------------------------------*/
+
+.header {
+    z-index: 999;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    .search {
+        float: left;
+        background: $primary;
+        height: 80px;
+        width: 45%;
+        border-bottom-right-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form {
+            width: 90%;
+            font-size: 0;
+            input[type=search] {
+                padding-left: 20px;
+                width: 85%;
+                height: 50px;
+                border: none;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            button {
+                height: 50px;
+                border: none;
+                padding: 10px;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #fff;
+                background: $secondary;
+            }
+        }
+
+    }
+    .brand-container {
+        position: relative;
+        text-align: center;
+        .brand {
+            width: 7%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            min-width: 140px;
+        }
+    }
+    .nav {
+        float: right;
+        height: 80px;
+        width: 45%;
+        background: $primary;
+        border-bottom-left-radius: 100px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .nav-fullscreen {
+            ul {
+                margin-left: 80px;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    padding: 24px 10px;
+                    a {
+                        color: #fff;
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        transition: ease-in-out 0.3s;
+                        &:hover {
+                            color: $tertiary !important;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-burger {
+            display: none;
+        }
+    }
+    .nav-mobile {
+        display: none;
+        transition: ease-in-out 0.5s;
+        transform: translateY(-100vh);
+    }
+}
+
+/*--------------------------------------------
+Media Queries
+--------------------------------------------*/
+
+@media screen and (max-width: 1500px) {
+    .header {
+        .search {
+            width: 40% !important;
+            input[type=search] {
+                width: 78% !important;
+            }
+        }
+        .nav {
+            width: 40% !important;
+            nav {
+                ul {
+                    li {
+                        a {
+                            font-size: 20px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+        .search {
+            width: 40% !important;
+            input[type=search] {
+                width: 70% !important;
+            }
+        }
+        .nav {
+            width: 40% !important;
+            nav {
+                ul {
+                    li {
+                        a {
+                            font-size: 18px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .header {
+        .search {
+            width: 40% !important;
+            input[type=search] {
+                width: 65% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .header {
+        background: #fff !important;
+        .brand {
+            padding-top: 5px !important;
+            min-width: 100px !important;
+            width: 100px !important;
+            left: 20px !important;
+            margin: 0 !important;
+        }
+        .search {
+            display: none;
+        }
+        .nav {
+            width: 55% !important;
+            background: unset;
+            animation: unset !important;
+            transition: unset !important;
+            margin-right: 20px !important;
+            .nav-fullscreen {
+                display: none;
+            }
+            .nav-burger {
+                display: block !important;
+                float: right;
+                width: 100%;
+                margin-right: 10px;
+                button {
+                    border: $primary solid;
+                    padding: 10px 0;
+                    width: 100%;
+                    font-size: 30px;
+                    font-weight: bold;
+                    background: unset;
+                }
+            }
+        }
+        .nav-mobile {
+            display: block !important;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            top: 0px;
+            .header-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    width: 120px;
+                }
+                button {
+                    position: absolute;
+                    right: 20px;
+                    font-size: 40px;
+                    font-weight: bold;
+                    background: unset;
+                    border: none;
+                    color: $primary;
+                }
+            }
+            .menu-mobile {
+                ul {
+                    border-top: solid $primary 2px;
+                    list-style: none;
+                    text-align: center;
+                    li {
+                        padding: 10px 0;
+                        border-bottom: solid $primary 2px;
+                        a {
+                            color: $primary;
+                            text-decoration: none;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

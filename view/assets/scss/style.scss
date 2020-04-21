@@ -1,0 +1,32 @@
+/*--------------------------------------------
+Global Variables
+--------------------------------------------*/
+
+$primary: #2C3E50;
+$secondary :#1ABC9C; 
+$tertiary :#F1C40F;
+
+/*--------------------------------------------
+Fonts
+--------------------------------------------*/
+
+@font-face {
+    font-family: "Quicksand_Light";
+    src: url(../fonts/Quicksand_Light.otf);
+}
+
+/*--------------------------------------------
+Global Styling
+--------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand_Light' !important;
+}
+/*--------------------------------------------
+Import style sheets
+--------------------------------------------*/
+
+@import "_header.scss", "_footer.scss", "_productGrid.scss", "_details.scss" ,"_admin.scss", "_contact.scss", "_checkout.scss", "_overview.scss";
