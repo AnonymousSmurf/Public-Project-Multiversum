@@ -11,7 +11,5 @@
 
 ## LOGIN
 - Project-Multiversum/?op=login
-- username= jack
-- password= 123
 
 ###### ©2020 Multiversum
